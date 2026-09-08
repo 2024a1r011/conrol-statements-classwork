@@ -9,13 +9,14 @@
 while True:
     pin = input("Enter the pin : ")
 
-    if len(pin)!=3 :
+    if len(pin)!=4 or not pin.isdigit():
         print("Error pin must contain exactly 4 digits " )
-    continue
+        continue
 
-    correct_pin = 1234
+    correct_pin = "1234"
     if pin == correct_pin:
         print("Lock will open")
+        break
     else:
         print("Incorrect pin")
 
